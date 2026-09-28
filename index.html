@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adhish — Data Analytics Portfolio">
+  <title>Adhish | Data Analytics Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:#050505; color:#fff; font-family:Arial,Helvetica,sans-serif; overflow-x:hidden; }
+    .gradient-text { background:linear-gradient(90deg,#fff,#777); -webkit-background-clip:text; color:transparent; }
+    .glass { background:rgba(255,255,255,.045); border:1px solid rgba(255,255,255,.10); backdrop-filter:blur(14px); }
+    .grid-bg {
+      background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+                        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:50px 50px;
+    }
+    .orb { position:absolute; border-radius:50%; background:radial-gradient(circle,#fff,#555,#111,transparent 70%); filter:blur(3px); opacity:.16; animation:float 7s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-25px) rotate(6deg)} }
+    .project-card,.skill { transition:transform .35s ease,border-color .35s ease,background .35s ease; }
+    .project-card:hover,.skill:hover { transform:translateY(-8px); border-color:rgba(255,255,255,.28); background:rgba(255,255,255,.07); }
+  </style>
+</head>
+
+<body>
+<header class="fixed top-0 left-0 w-full z-50 bg-black/20 backdrop-blur-xl">
+  <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    <a href="#home" class="font-bold tracking-[.25em]">ADHISH<span class="text-gray-500">.</span></a>
+    <div class="hidden md:flex gap-8 text-sm text-gray-400">
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#skills" class="hover:text-white">Skills</a>
+      <a href="#projects" class="hover:text-white">Projects</a>
+      <a href="#certificates" class="hover:text-white">Certificates</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </div>
+    <a href="#contact" class="rounded-full border border-white/20 px-5 py-2 text-sm hover:bg-white hover:text-black transition">Let's Talk</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="min-h-screen relative overflow-hidden flex items-center grid-bg">
+  <div class="orb w-[420px] h-[420px] right-[-100px] top-[15%]"></div>
+  <div class="orb w-[300px] h-[300px] left-[-120px] bottom-[-80px]"></div>
+  <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid lg:grid-cols-2 gap-12 items-center pt-20">
+    <div>
+      <p class="hero-item text-gray-500 uppercase tracking-[.4em] text-xs mb-6">Data Analytics • Python • SQL</p>
+      <h1 class="hero-item text-6xl md:text-8xl font-bold tracking-tight">Hi, I'm <span class="gradient-text">Adhish.</span></h1>
+      <h2 class="hero-item text-2xl md:text-4xl text-gray-400 mt-5">Data Analytics Student</h2>
+      <p class="hero-item text-gray-500 max-w-xl leading-8 mt-7">
+        I transform data into meaningful insights using statistics, Python, SQL and modern analytics tools.
+      </p>
+      <div class="hero-item flex flex-wrap gap-4 mt-9">
+        <a href="#projects" class="px-7 py-3 rounded-full bg-white text-black font-medium hover:scale-105 transition">Explore My Work</a>
+        <a href="#contact" class="px-7 py-3 rounded-full border border-white/20 hover:bg-white/10 transition">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="relative flex justify-center">
+      <div class="absolute w-[380px] h-[380px] rounded-full border border-white/10 animate-pulse"></div>
+      <div class="relative w-[330px] h-[430px] md:w-[400px] md:h-[520px] rounded-[40px] overflow-hidden border border-white/10 shadow-2xl">
+        <img src="assets/profile-hero.png" alt="Adhish" class="w-full h-full object-cover object-center hover:scale-105 transition duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-600 text-xs tracking-[.3em]">SCROLL ↓</div>
+</section>
+
+<section id="about" class="py-32 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <p class="text-gray-500 uppercase tracking-widest text-sm mb-4">01 — About</p>
+      <h2 class="text-5xl md:text-7xl font-bold tracking-tight">Curious mind.<br><span class="text-gray-500">Data driven.</span></h2>
+      <p class="text-gray-400 leading-8 mt-8">
+        I'm Adhish, a Statistics student developing my skills in Data Analytics and Python. I enjoy exploring datasets, finding patterns, creating visualizations and turning analysis into simple, useful insights.
+      </p>
+    </div>
+    <div class="relative flex justify-center">
+      <div class="absolute -inset-4 border border-white/10 rounded-3xl"></div>
+      <img src="assets/profile-about.png" alt="Adhish" class="relative w-full max-w-md rounded-3xl object-cover hover:scale-[1.02] transition duration-700">
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="py-32 px-6 bg-[#080808]">
+  <div class="max-w-6xl mx-auto">
+    <p class="text-gray-500 uppercase tracking-widest text-sm mb-4">02 — Skills</p>
+    <h2 class="text-5xl md:text-7xl font-bold mb-16">My Toolkit<span class="text-gray-600">.</span></h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="skill glass p-8 rounded-2xl"><h3 class="text-xl font-semibold">Python</h3><p class="text-gray-500 text-sm mt-2">Data analysis & programming</p></div>
+      <div class="skill glass p-8 rounded-2xl"><h3 class="text-xl font-semibold">SQL</h3><p class="text-gray-500 text-sm mt-2">Queries & data handling</p></div>
+      <div class="skill glass p-8 rounded-2xl"><h3 class="text-xl font-semibold">Excel</h3><p class="text-gray-500 text-sm mt-2">Analysis & reporting</p></div>
+      <div class="skill glass p-8 rounded-2xl"><h3 class="text-xl font-semibold">Statistics</h3><p class="text-gray-500 text-sm mt-2">Statistical analysis</p></div>
+      <div class="skill glass p-8 rounded-2xl"><h3 class="text-xl font-semibold">Tableau</h3><p class="text-gray-500 text-sm mt-2">Data visualization</p></div>
+      <div class="skill glass p-8 rounded-2xl"><h3 class="text-xl font-semibold">Power BI</h3><p class="text-gray-500 text-sm mt-2">Business dashboards</p></div>
+      <div class="skill glass p-8 rounded-2xl"><h3 class="text-xl font-semibold">Google Sheets</h3><p class="text-gray-500 text-sm mt-2">Data management</p></div>
+      <div class="skill glass p-8 rounded-2xl"><h3 class="text-xl font-semibold">AI Tools</h3><p class="text-gray-500 text-sm mt-2">AI & prompting</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="py-32 px-6">
+  <div class="max-w-6xl mx-auto">
+    <p class="text-gray-500 uppercase tracking-widest text-sm mb-4">03 — Projects</p>
+    <h2 class="text-5xl md:text-7xl font-bold mb-16">Selected Work<span class="text-gray-600">.</span></h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <article class="project-card glass rounded-3xl p-8 min-h-[340px] flex flex-col justify-between">
+        <div><span class="text-xs text-gray-500">COLLEGE PROJECT</span><h3 class="text-3xl font-bold mt-5">Social Media & Academic Performance</h3><p class="text-gray-400 mt-5 leading-7">Statistical analysis exploring the relationship between social media usage and academic performance among college students.</p></div>
+        <div class="flex flex-wrap gap-2 mt-8"><span class="px-3 py-1 rounded-full bg-white/5 text-xs">Statistics</span><span class="px-3 py-1 rounded-full bg-white/5 text-xs">Data Analysis</span><span class="px-3 py-1 rounded-full bg-white/5 text-xs">Visualization</span></div>
+      </article>
+      <article class="project-card glass rounded-3xl p-8 min-h-[340px] flex flex-col justify-between">
+        <div><span class="text-xs text-gray-500">DATA ANALYTICS</span><h3 class="text-3xl font-bold mt-5">Customer Delinquency Analysis</h3><p class="text-gray-400 mt-5 leading-7">Analysis of customer payment behavior, risk segments and predictive insights for collections decision-making.</p></div>
+        <div class="flex flex-wrap gap-2 mt-8"><span class="px-3 py-1 rounded-full bg-white/5 text-xs">Python</span><span class="px-3 py-1 rounded-full bg-white/5 text-xs">Analytics</span><span class="px-3 py-1 rounded-full bg-white/5 text-xs">AI</span></div>
+      </article>
+      <article class="project-card glass rounded-3xl p-8 min-h-[340px] flex flex-col justify-between">
+        <div><span class="text-xs text-gray-500">TABLEAU</span><h3 class="text-3xl font-bold mt-5">Telemetry Dashboard</h3><p class="text-gray-400 mt-5 leading-7">Interactive telemetry analysis focused on operational data, machine activity and business insights.</p></div>
+        <div class="flex flex-wrap gap-2 mt-8"><span class="px-3 py-1 rounded-full bg-white/5 text-xs">Tableau</span><span class="px-3 py-1 rounded-full bg-white/5 text-xs">Dashboard</span></div>
+      </article>
+      <article class="project-card glass rounded-3xl p-8 min-h-[340px] flex flex-col justify-between">
+        <div><span class="text-xs text-gray-500">PYTHON</span><h3 class="text-3xl font-bold mt-5">Python Data Analysis</h3><p class="text-gray-400 mt-5 leading-7">Practical Python work covering loops, conditions, functions, operators and data-processing fundamentals.</p></div>
+        <div class="flex flex-wrap gap-2 mt-8"><span class="px-3 py-1 rounded-full bg-white/5 text-xs">Python</span><span class="px-3 py-1 rounded-full bg-white/5 text-xs">Programming</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="certificates" class="py-32 px-6 bg-[#080808]">
+  <div class="max-w-6xl mx-auto">
+    <p class="text-gray-500 uppercase tracking-widest text-sm mb-4">04 — Certifications</p>
+    <h2 class="text-5xl md:text-7xl font-bold mb-16">Learning<span class="text-gray-600">.</span></h2>
+    <div class="space-y-4">
+      <div class="glass rounded-2xl p-6"><h3 class="font-semibold">Google AI Essentials</h3><p class="text-gray-500 text-sm">Google</p></div>
+      <div class="glass rounded-2xl p-6"><h3 class="font-semibold">Business Analysis & Process Management</h3><p class="text-gray-500 text-sm">Coursera</p></div>
+      <div class="glass rounded-2xl p-6"><h3 class="font-semibold">Introduction to Data Analysis using Microsoft Excel</h3><p class="text-gray-500 text-sm">Coursera</p></div>
+      <div class="glass rounded-2xl p-6"><h3 class="font-semibold">Understanding Basic SQL Syntax</h3><p class="text-gray-500 text-sm">Coursera</p></div>
+      <div class="glass rounded-2xl p-6"><h3 class="font-semibold">Introduction to Data Engineering</h3><p class="text-gray-500 text-sm">IBM</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="py-32 px-6">
+  <div class="max-w-6xl mx-auto">
+    <p class="text-gray-500 uppercase tracking-widest text-sm mb-4">05 — Education</p>
+    <div class="glass rounded-3xl p-10">
+      <span class="text-gray-500 text-sm">2023 — 2026</span>
+      <h2 class="text-4xl font-bold mt-4">BSc Statistics</h2>
+      <p class="text-gray-400 mt-3">Kannur University</p>
+      <p class="text-gray-500 mt-2">Govinda Pai Memorial Government College, Manjeshwar</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="min-h-[75vh] flex items-center px-6">
+  <div class="max-w-6xl mx-auto w-full text-center">
+    <p class="text-gray-500 uppercase tracking-widest text-sm mb-6">06 — Contact</p>
+    <h2 class="text-5xl md:text-8xl font-bold tracking-tight">Let's build something <span class="gradient-text">meaningful.</span></h2>
+    <p class="text-gray-500 max-w-xl mx-auto mt-8">Open to learning opportunities, internships, collaborations and entry-level data analytics roles.</p>
+    <div class="flex flex-wrap justify-center gap-4 mt-10">
+      <a href="mailto:YOUR_EMAIL@example.com" class="px-7 py-3 rounded-full bg-white text-black">Email Me</a>
+      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" class="px-7 py-3 rounded-full border border-white/20">LinkedIn</a>
+      <a href="https://github.com/YOUR-GITHUB" target="_blank" class="px-7 py-3 rounded-full border border-white/20">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="border-t border-white/10 py-8 text-center text-gray-600 text-sm">
+  © 2026 Adhish. Built with curiosity & data.
+</footer>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".hero-item", {
+    y: 50, opacity: 0, duration: 1.1, stagger: .14, ease: "power3.out"
+  });
+
+  gsap.utils.toArray("section").forEach(section => {
+    gsap.from(section.querySelectorAll(":scope > div"), {
+      scrollTrigger: { trigger: section, start: "top 82%" },
+      y: 35, opacity: 0, duration: .9, stagger: .08, ease: "power3.out"
+    });
+  });
+</script>
+</body>
+</html>
